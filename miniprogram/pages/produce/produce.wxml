@@ -1,0 +1,107 @@
+<!--pages/produce/produce.wxml-->
+<navbar title="{{title}}"></navbar>
+<view class="page-section">
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" wx:if="{{goods.imgurl.length > 1}}">
+    <block wx:for="{{goods.imgurl}}" wx:key="index">
+      <swiper-item>
+        <view class="swiper-item">
+          <image src="{{item}}" mode="widthFix" class="img"></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="swiper" wx:else>
+    <image src="{{goods.imgurl[0]}}" mode="widthFix" class="img"></image>
+  </view>
+</view>
+<view class="detail-box">
+  <view class="pro-name">{{goods.name}}</view>
+  <view class="pro-title">{{goods.title}}</view>
+  <view class="pro-price">￥{{grams.price}}.00</view>
+  <view class="pro-lable" wx:if="{{goods.tags}}">
+    <view class="lable" wx:for="{{goods.tags}}" wx:key="index">{{item}}</view>
+  </view>
+  <view class="pro-taste" wx:if="{{goods.formula}}">
+    <view class="taste" wx:for="{{goods.formula}}" wx:key="index">
+      <image src="{{item.img}}" class="img"></image>
+      <text>{{item.txt}}</text>
+    </view>
+  </view>
+  <view class="pro-select">
+    <view class="selected" bindtap="toggleCard">已选择：{{grams.gram}}
+      <view class="i"></view>
+    </view>
+    <view class="options">
+      <view class="option specs">  <!-- 大小 -->
+        <view class="i"></view>{{grams.specs}}
+      </view>
+      <view class="option amount" wx:if="{{grams.amount}}">  <!-- 数量 -->
+        <view class="i"></view>适合{{grams.amount}}人
+      </view>
+      <view class="option table" wx:if="{{grams.table}}">  <!-- 餐具 -->
+        <view class="i"></view>{{grams.table}}
+      </view>
+      <view class="option date">  <!-- 时间 -->
+        <view class="i"></view>最早{{grams.date}}配送
+      </view>
+    </view>
+    <view class="stores">
+      <view class="store" wx:if="{{goods.condition}}">
+        <image src="https://static.21cake.com/themes/wap/img/fresh.png" class="img"></image>
+        <text>保鲜条件</text><view class="condit">{{goods.condition}}</view>
+      </view>
+      <view class="store" wx:if="{{goods.sweet}}">
+        <image src="https://m.21cake.com/themes/wap/img/sweet.png" class="img"></image>
+        <text>参考甜度</text>
+        <view class="sweet">
+          <view class="swt {{index < goods.sweet?'active':''}}" wx:for="{{5}}" wx:key="index"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="detail-desc">
+  <view class="desc" wx:for="{{goods.describe}}" wx:key="index">/{{item}}/</view>
+</view>
+
+<view class="detail-img">
+  <rich-text nodes="{{goods.detail}}"></rich-text>
+</view>
+
+<bottom></bottom>
+<view style="height: 92rpx"></view>
+
+
+<view class="select-card" wx:if="{{selectCard}}">
+  <view class="i" bindtap="toggleCard"></view>
+  <view class="card {{selectCard?'on':''}}">
+    <view class="card-price">￥{{grams.price}}.00</view>
+    <view class="options">
+      <view class="option specs">  <!-- 大小 -->
+        <view class="i"></view>{{grams.specs}}
+      </view>
+      <view class="option amount" wx:if="{{grams.amount}}">  <!-- 数量 -->
+        <view class="i"></view>适合{{grams.amount}}人
+      </view>
+      <view class="option table" wx:if="{{grams.table}}">  <!-- 餐具 -->
+        <view class="i"></view>{{grams.table}}
+      </view>
+      <view class="option date">  <!-- 时间 -->
+        <view class="i"></view>最早{{grams.date}}配送
+      </view>
+    </view>
+    <view class="card-normal">
+      <view class="normal-title">商品规格</view>
+      <view class="normal-list">
+        <view class="normal-item {{index == gid?'on':''}}" wx:for="{{goods.grams}}" wx:key="index" bindtap="changeGram" data-index="{{index}}">{{item.gram}}</view>
+      </view>
+    </view>
+    <view class="close" bindtap="toggleCard"></view>
+  </view>
+</view>
+
+<view class="btn-group">
+  <view class="btn">立即购买</view>
+  <view class="btn buy" bindtap="addCart">加入购物车</view>
+</view>

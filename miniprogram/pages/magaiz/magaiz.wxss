@@ -1,0 +1,18 @@
+/* pages/magaiz/magaiz.wxss */
+.magaiz {
+  padding: 0 30rpx;
+}
+.magaiz .h2 {
+  margin-top: 30rpx;
+  font-size: 48rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+}
+.magaiz .p {
+  font-size: 26rpx;
+  color: #8c8c8c;
+  margin-bottom: 30rpx;
+}
+.content {
+  margin-bottom: 30rpx;
+}

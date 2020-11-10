@@ -1,0 +1,54 @@
+<!--pages/user/user.wxml-->
+<navbar title="{{title}}"></navbar>
+<view class="user">
+  <view class="top">我的廿一客</view>
+  <view class="person">
+    <view class="logo">
+      <image src="{{avatarUrl}}" class="img"></image>
+    </view>
+    <view class="myinfo">
+      <view class="login" wx:if="{{logged}}">
+        <view class="title">{{userInfo.nickName}}</view>
+        <!-- <view class="phone">17638141960</view> -->
+      </view>
+      <view class="unlogin" wx:else>
+        <view class="title">
+          <button class="btn" hover-class="none" bindgetuserinfo="onGetUserInfo" open-type="getUserInfo">点击登录/注册</button>
+        </view>
+        <!-- <view class="phone">还没有登录</view> -->
+      </view>
+      <view class="account">
+        <view class="item">
+          <view class="p">￥0.00</view>
+          <view class="txt">果实币余额</view>
+        </view>
+        <view class="item">
+          <view class="p">0张</view>
+          <view class="txt">优惠券</view>
+        </view>
+      </view>
+      <view class="menu-list">
+          <view class="menu order">
+            <view class="p">全部订单</view>
+          </view>
+          <view class="menu address">
+            <view class="p">地址管理</view>
+          </view>
+      </view>
+    </view>
+  </view>
+  <view class="ad">
+    <image src="https://static.21cake.com//upload/images/20200317/7649161442134eb493c5d60fbfe84540.jpeg" mode="widthFix" class="img"></image>
+  </view>
+  <view class="exit" wx:if="{{logged}}" bindtap="exitLogin">退出登录</view>
+  <view class="bottom">
+      <view class="contact-us">
+        <view class="info">订购专线：400-650-2121</view>
+        <view class="copyright">
+          COPYRIGHT 2013  京ICP备06069127号  京公网安备
+          <view>11011202001547</view>
+        </view>
+      </view>
+    </view>
+</view>
+

@@ -1,0 +1,26 @@
+/* pages/type/type.wxss */
+.top .head {
+  width: 100%;
+}
+.top .head .img  {
+  display: block;
+  width: 100%;
+  height: 300rpx;
+}
+.top .head .title  {
+  padding: 16rpx 0;
+  text-align: center;
+  background: rgba(213,191,167,0.10);
+  border-bottom: 2rpx solid #E9E9E9;
+}
+.top .head .title .h4 {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #442818;
+}
+.top .head .title .p {
+  font-size: 24rpx;
+  line-height: 26rpx;
+  margin-top: 4rpx;
+  color: #D5BFA7;
+}

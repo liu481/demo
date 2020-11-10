@@ -1,0 +1,10 @@
+<!--pages/magaiz/magaiz.wxml-->
+<navbar title="{{title}}"></navbar>
+<view class="magaiz">
+  <view class="h2">{{magaize.head}}</view>
+  <view class="p">发布时间：{{magaize.date}}</view>
+  <view class="content">
+    <rich-text nodes="{{magaize.content}}"></rich-text>
+  </view>
+</view>
+<bottom></bottom>

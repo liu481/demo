@@ -1,0 +1,18 @@
+<!--pages/gallery/gallery.wxml-->
+<navbar title="{{title}}"></navbar>
+<view class="sort">
+  <view class="sort-nav">
+    <view class="sort-item" wx:for="{{tabs}}" wx:key="index">
+      <view class="span {{index == tid?'on':''}}" bindtap="changeTab" data-index="{{index}}">{{item.type}}</view>
+    </view>
+  </view>
+  <view class="sort-desc">
+    <view class="h3">{{tabs[tid].type}}</view>
+    <view class="p">{{tabs[tid].intro}}</view>
+  </view>
+</view>
+<goods type="{{tid}}"></goods>
+<view class="lost" style="padding: 50rpx 80rpx 0 0; margin: 0 40rpx; background: url(https://static.21cake.com/themes/wap/img/list-empty.png) no-repeat right center; background-size: 34px 38px;">
+  <view class="none" style="line-height: 144rpx; text-align: right; color: #D5D5D5;">没了</view>
+</view>
+<bottom></bottom>

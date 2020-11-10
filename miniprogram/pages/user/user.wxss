@@ -1,0 +1,142 @@
+/* pages/user/user.wxss */
+.top {
+  margin-top: 6rpx;
+  font-size: 32rpx;
+  line-height: 88rpx;
+  color: #8e6a55;
+  text-align: center;
+  border-bottom: 2rpx solid #fbeeef;
+}
+.logo {
+  margin-top: 46rpx;
+  text-align: center;
+}
+.logo .img {
+  display: inline-block;
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.myinfo {
+  text-align: center;
+  margin-top: 20rpx;
+  position: relative;
+}
+.myinfo .title {
+  line-height: 56rpx;
+  color: #8e6a55;
+  font-size: 32rpx;
+}
+.myinfo .phone {
+  color: #442818;
+  /* width: 220rpx; */
+  display: inline-block;
+  text-indent: 24rpx;
+  margin-bottom: 16rpx;
+  line-height: 56rpx;
+  margin: 0 auto;
+  background: url(https://mold.21cake.com/wap_themes/21cake/images/icon/Phone.png) 0px center no-repeat;
+  background-size: 10px 14px;
+}
+.myinfo .unlogin .title .btn {
+  width: 320rpx;
+  padding: 0;
+  color: #442818;
+  line-height: 56rpx;
+}
+.myinfo .unlogin .phone {
+  background: none;
+  text-indent: 0;
+  color: #8e6a55;
+  font-size: 24rpx;
+}
+.account {
+  width: 100%;
+  display: flex;
+  margin-top: 40rpx;
+  padding-top: 10rpx;
+  border-top: 2rpx solid #efefef;
+}
+.account .item {
+  width: 50%;
+  height: 88rpx;
+  flex-shrink: 0;
+  text-align: center;
+}
+.account .item .p {
+  font-size: 28rpx;
+  line-height: 42rpx;
+}
+.account .item .txt {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #8e6a55;
+}
+
+.menu-list {
+  margin-top: 70rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.menu-list .menu {
+  padding-left: 100rpx;
+  line-height: 96rpx;
+}
+.menu-list .menu.order {
+  background: url(https://m.21cake.com/wap_themes/21cake/images/icon/member2.png) 20px center no-repeat;
+  background-size: 23px;
+}
+.menu-list .menu.address {
+  background: url(https://m.21cake.com/wap_themes/21cake/images/icon/member1.png) 20px center no-repeat;
+  background-size: 23px;
+}
+.menu-list .menu .p {
+  text-align: left;
+  margin: 0 40rpx 0 0;
+  line-height: 94rpx;
+  font-size: 28rpx;
+  color: #8e6a55;
+  border-top: 2rpx solid #eee;
+  background: url(https://mold.21cake.com/wap_themes/21cake/images/icon/go_next.png) right center no-repeat;
+  background-size: 10px;
+}
+.ad {
+  background: #f6f6f6;
+  width: 100%;
+  padding: 30rpx 24rpx;
+  box-sizing: border-box;
+}
+.ad .img {
+  display: block;
+  width: 100%;
+}
+.exit {
+  text-align: center;
+  height: 94rpx;
+  line-height: 94rpx;
+  font-size: 28rpx;
+  background: #fff;
+}
+.bottom {
+  width: 100%;
+  background: #333333;
+  padding: 20rpx 5%;
+  color: #BEBEBE;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.bottom .contact-us {
+  padding: 26rpx 0 54rpx;
+}
+.bottom .contact-us .info {
+  color: #a77746;
+  font-size: 22rpx;
+  line-height: 36rpx;
+  margin: 20rpx 0 0;
+}
+.bottom .contact-us .copyright {
+  color: #c6a37c;
+  font-size: 20rpx;
+  line-height: 32rpx;
+  margin: 20rpx 0 0;
+}

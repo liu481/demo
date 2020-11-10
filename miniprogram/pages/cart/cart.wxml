@@ -1,0 +1,104 @@
+<!--pages/cart/cart.wxml-->
+<navbar title="{{title}}"></navbar>
+
+<!-- 购物车不为空时 -->
+<view class="have" wx:if="{{cartList.length}}">
+  <view class="tip">· 满100元免配送服务费 ·</view>
+  <view class="list">
+    <view class="item" wx:for="{{cartList}}" wx:key="index">
+      <view class="box">
+        <navigator class="a" url="../produce/produce?id={{item.cake_id}}" hover-class="none">
+          <image src="{{item.cake[0].img}}" class="img"></image>
+        </navigator>
+        <view class="info">
+          <view class="name">{{item.cake[0].name}}</view>
+          <view class="title">{{item.cake[0].title}}</view>
+          <view class="gram" wx:if="{{item.cake[0].grams.length == 1}}">规格：{{item.gram.gram}}</view>
+          <view class="grams" wx:else bindtap="showCard" data-index="{{index}}" data-id="{{item._id}}">规格：{{item.gram.gram}}<view class="i"></view>
+          </view>
+          <view class="price">￥{{item.gram.price * item.num}}.00</view>
+        </view>
+        <view class="cart-num">
+          <!-- 商品数量为1时 -->
+          <view class="num del" wx:if="{{item.num == 1}}" bindtap="changeNum" data-t="0" data-index="{{index}}"
+            data-id="{{item._id}}">
+            <image class="img" src="https://static.21cake.com/themes/wap/img/delect-min.png" />
+          </view>
+          <!-- 商品数量大于1时 -->
+          <view class="num even" wx:if="{{item.num > 1}}" bindtap="changeNum" data-t="1" data-index="{{index}}"
+            data-id="{{item._id}}">
+            <image class="img" src="https://static.21cake.com//themes/wap/img/-.png" />
+          </view>
+          <view class="num num-c">{{item.num}}</view>
+          <!-- add -->
+          <view class="num add" bindtap="changeNum" data-t="2" data-index="{{index}}" data-id="{{item._id}}">
+            <image class="img" mode="widthFix" src="https://static.21cake.com//themes/wap/img/+.png" />
+          </view>
+        </view>
+      </view>
+      <view class="laid-count">每份{{item.gram.table}}</view>
+      <view style="border-top: 2rpx solid #f0f0f0"></view>
+    </view>
+  </view>
+
+  <!-- 底部 -->
+  <view class="bottom">
+    <view class="bot-l" bindtap="clearCart"></view>
+    <view class="bot-r">
+      <view class="bot-rl">
+        <view class="price">
+          <view class="i">￥</view>{{totil}}.00
+        </view>
+        <view class="p">商品</view>
+      </view>
+      <view class="bot-rr" bindtap="tobuy">去结算</view>
+    </view>
+  </view>
+
+  <!-- 选项卡 -->
+  <view class="select-card" wx:if="{{selectCard}}">
+    <view class="i" bindtap="cancel"></view>
+    <view class="card {{selectCard?'on':''}}">
+      <view class="card-price">￥{{gram.price}}.00</view>
+      <view class="options">
+        <view class="option specs">
+          <!-- 大小 -->
+          <view class="i"></view>{{gram.specs}}
+        </view>
+        <view class="option amount" wx:if="{{gram.amount}}">
+          <!-- 数量 -->
+          <view class="i"></view>适合{{gram.amount}}人
+        </view>
+        <view class="option table" wx:if="{{gram.table}}">
+          <!-- 餐具 -->
+          <view class="i"></view>{{gram.table}}
+        </view>
+        <view class="option date">
+          <!-- 时间 -->
+          <view class="i"></view>最早{{gram.date}}配送
+        </view>
+      </view>
+      <view class="card-normal">
+        <view class="normal-title">商品规格</view>
+        <view class="normal-list">
+          <view class="normal-item {{item.gram == gram.gram?'on':''}}" wx:for="{{grams}}" wx:key="index" data-index="{{index}}" bindtap="choose">{{item.gram}}</view>
+        </view>
+      </view>
+      <view class="close" bindtap="cancel"></view>
+      <view class="btn-group">
+        <view class="btn" bindtap="cancel">取消</view>
+        <view class="btn buy" bindtap="confirm">确定</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+<!-- 购物车为空时 -->
+<view class="none" wx:else>
+  <image src="https://static.21cake.com/themes/wap/img/cart-empty.png" class="img"></image>
+  <view class="p">您的购物车里还没有商品</view>
+  <navigator url="../index/index" hover-class="none">去购物 >>></navigator>
+</view>

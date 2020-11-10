@@ -1,0 +1,95 @@
+<!--pages/order/order.wxml-->
+<navbar title="{{title}}"></navbar>
+
+<view class="order">
+  <view class="address">
+    <view class="i"></view>
+    <view class="address-txt">
+      <view class="span"></view><text>新增收货地址</text>
+    </view>
+    <view class="i"></view>
+  </view>
+  <view class="pro-img">
+    <view class="item" wx:for="{{cartList}}" wx:key="index">
+      <image class="img" src="{{item.cake[0].img}}"></image>
+      <view class="price-txt">
+        <view class="gram">{{item.gram.gram}}</view>
+        <view class="price"><text>¥{{item.gram.price}}.00</text><text>x{{item.num}}</text></view>
+      </view>
+    </view>
+  </view>
+  <view class="check-list">
+    <view class="li">
+      <text>21cake配送</text>
+      <view class="icon on"></view>
+    </view>
+    <view class="li">
+      <text>站点自提</text>
+      <view class="icon"></view>
+    </view>
+    <view class="li tip">
+      <view>友情提示</view>
+    </view>
+    <view class="li date">
+      <view class="li-l"><view class="i"></view>配送时间</view>
+      <view class="li-r">请选择</view>
+    </view>
+    <view class="li">
+      <view class="li-l">优惠券/尊享卡</view>
+      <view class="li-r">无可用</view>
+    </view>
+    <view class="li">
+      <view class="li-l">代金卡</view>
+      <view class="li-r">未使用</view>
+    </view>
+    <view class="li bread">
+      <view class="li-l">面包卡<view class="i">充200送20</view></view>
+      <view class="li-r">去充值</view>
+    </view>
+  </view>
+  <view class="pay-way">
+    <view class="h5">支付方式</view>
+    <view class="payment-list">
+      <view class="li deducted">
+        <text>余额支付（¥0）</text>
+        <view class="icon"></view>
+      </view>
+      <view class="li pay-icon">
+        <view class="li-l">
+          <image src="https://static.21cake.com/themes/wap/img/pay-weixin.png" class="img"></image><view>微信支付</view>
+        </view>
+        <view class="li-r on"></view>
+      </view>
+      <view class="li pay-icon">
+        <view class="li-l">
+          <image src="//static.21cake.com/themes/site/img/pay-jdonline.png" class="img"></image><view>京东支付</view>
+        </view>
+        <view class="li-r"></view>
+      </view>
+      <view class="li pay-icon">
+        <view class="li-l">
+          <image src="//static.21cake.com/themes/site/img/pay-cmb.jpg" class="img"></image><view>银行卡支付</view>
+        </view>
+        <view class="li-r"></view>
+      </view>
+      <view class="li invoice">
+        <view class="li-l">发票</view>
+        <view class="li-r">不需要</view>
+      </view>
+    </view>
+  </view>
+  <view class="leave-msg">
+    <view class="h5">订单留言</view>
+    <textarea class="ipt" placeholder="请留下您对订单或商品的特殊要求，200字以内" placeholder-class="placeholder"></textarea>
+  </view>
+  <view class="pay-money">
+    <view class="h5">金额明细</view>
+    <view class="cost"><text>商品总额</text><text>￥{{totil}}.00</text></view>
+    <view class="cost"><text>配送服务费</text><text>￥0.00</text></view>
+  </view>
+</view>
+
+<view class="pay-bottom">
+  <view class="price">共￥<text>{{totil}}.00</text></view>
+  <view class="buy">去下单</view>
+</view>

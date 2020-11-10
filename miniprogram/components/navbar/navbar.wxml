@@ -1,0 +1,60 @@
+<!--components/navbar/navbar.wxml-->
+<view class="navbar">
+  <view style="{{'height: ' + statusBarHeight}}"></view>
+  <view class='navbar-title'>
+    <view class='title'>{{title}}</view>
+  </view>
+  <view class="navbar-menu">
+    <view class="menu-l">
+      <view class="menu" bindtap="menuShow"><view class="menu-icon"></view></view>  <!-- 菜单 -->
+      <view class="city" bindtap="toggleCity"><view class="city-icon"></view>{{city}}</view>  <!-- 城市 -->
+    </view>
+    <view class="menu-c">
+      <navigator url="../../pages/index/index" class="logo" hover-class="none">
+        <image class="logo-img" src="https://static.21cake.com/themes/wap/img/logo.png"></image>
+      </navigator>
+    </view>
+    <view class="menu-r">
+      <navigator url="../../pages/message/message" class="nav msg" hover-class="none">  <!-- 消息 -->
+        <view class="img"></view>
+      </navigator>
+      <navigator url="../../pages/cart/cart" class="nav cart" hover-class="none">  <!-- 购物车 -->
+        <view class="img"></view>
+      </navigator>
+    </view>
+  </view>
+  <view class="menu-nav" wx:if="{{menuShow}}">
+    <view class="menu">
+      <navigator url="../../pages/index/index" class="a" hover-class="none">
+        <image class="img" src="https://static.21cake.com/themes/wap/img/menu-home.png" />
+        <view class="title">首页</view>
+      </navigator>
+    </view>
+    <view class="menu">
+      <navigator url="../../pages/gallery/gallery?type=0" class="a" hover-class="none">
+        <image class="img" src="https://static.21cake.com/themes/wap/img/menu-icon-class.png" />
+        <view class="title">分类</view>
+      </navigator>
+    </view>
+    <view class="menu">
+      <navigator url="../../pages/user/user" class="a" hover-class="none">
+        <image class="img" src="https://static.21cake.com/themes/wap/img/menu-icon-per.png" />
+        <view class="title">个人</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view style="{{'height: ' + navigationBarHeight}}"></view>
+
+<!-- 切换城市 -->
+<view class="city-box" wx:if="{{cityShow}}">
+  <view class="i" bindtap="toggleCity"></view>
+  <view class="city-list">
+    <view class="p">选择城市</view>
+    <view class="ul">
+      <view class="city {{txt == item?'on':''}}" wx:for="{{citys}}" wx:key="index" bindtap="switchCity" data-city="{{item}}">{{item}}</view>
+    </view>
+    <view class="btn-city" bindtap="sure">确定</view>
+    <view class="txt"></view>
+  </view>
+</view>

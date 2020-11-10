@@ -1,0 +1,52 @@
+<!--components/goods/goods.wxml-->
+<view class="list-box">
+  <view class="list-item" wx:for="{{goods}}" wx:key="index">
+    <navigator url="../../pages/produce/produce?id={{item._id}}" hover-class="none">
+      <view class="image">
+        <image src="{{item.img}}" mode="widthFix" class="img"></image>
+      </view>
+      <view class="info">
+        <view class="name">{{item.name}}</view>
+        <view class="title">{{item.title}}</view>
+        <view class="price">￥{{item.grams[0].price}}/{{item.grams[0].gram}}</view>
+      </view>
+    </navigator>
+    <view class="cart" bindtap="showCard" data-index="{{index}}" data-id="{{item._id}}">
+      <image class="img" src="https://static.21cake.com//themes/wap/img/list-cart.png" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+
+  <!-- 选项卡 -->
+  <view class="select-card" wx:if="{{selectCard}}">
+    <view class="i" bindtap="cancel"></view>
+    <view class="card">
+      <view class="card-price">￥{{gram.price}}.00</view>
+      <view class="options">
+        <view class="option specs">
+          <!-- 大小 -->
+          <view class="i"></view>{{gram.specs}}
+        </view>
+        <view class="option amount" wx:if="{{gram.amount}}">
+          <!-- 数量 -->
+          <view class="i"></view>适合{{gram.amount}}人
+        </view>
+        <view class="option table" wx:if="{{gram.table}}">
+          <!-- 餐具 -->
+          <view class="i"></view>{{gram.table}}
+        </view>
+        <view class="option date">
+          <!-- 时间 -->
+          <view class="i"></view>最早{{gram.date}}配送
+        </view>
+      </view>
+      <view class="card-normal">
+        <view class="normal-title">商品规格</view>
+        <view class="normal-list">
+          <view class="normal-item {{item.gram == gram.gram?'on':''}}" wx:for="{{grams}}" wx:key="index" data-index="{{index}}" bindtap="choose">{{item.gram}}</view>
+        </view>
+      </view>
+      <view class="close" bindtap="cancel"></view>
+      <view class="btn" bindtap="confirm">加入购物车<text>(￥{{gram.price}}.00)</text></view>
+    </view>
+  </view>

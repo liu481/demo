@@ -1,0 +1,265 @@
+/* pages/order/order.wxss */
+.order {
+  margin-bottom: 220rpx;
+}
+
+.address {
+  background: #fff;
+  margin-top: 26rpx;
+}
+.address .i {
+  display: block;
+  width: 100%;
+  height: 4rpx;
+  background: url(https://static.21cake.com/themes/wap/img/adrss-bj.png);
+}
+.address .address-txt {
+  height: 136rpx;
+  line-height: 136rpx;
+  text-align: center;
+}
+.address .address-txt .span {
+  height: 28rpx;
+  width: 28rpx;
+  display: inline-block;
+  vertical-align: -2rpx;
+  margin-right: 12rpx;
+  background: url(https://static.21cake.com/themes/wap/img/+.png);
+  background-size: 14px 14px;
+}
+
+.pro-img {
+  display: flex;
+  height: 282rpx;
+  overflow: auto;
+}
+.pro-img .item {
+  flex-shrink: 0;
+  width: 190rpx;
+  height: 210rpx;
+  margin-top: 36rpx;
+  margin-left: 28rpx;
+  position: relative;
+}
+.pro-img .item .img {
+  display: block;
+  height: 210rpx;
+  width: 190rpx;
+  background: #ccc;
+}
+.pro-img .item .price-txt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  padding: 4rpx 2%;
+  font-size: 24rpx;
+}
+.pro-img .item .price-txt .price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.check-list .li {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #F0F0F0;
+  margin-left: 28rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.check-list .li .icon {
+  display: inline-block;
+  height: 44rpx;
+  width: 44rpx;
+  margin-top: 28rpx;
+  margin-left: 10rpx;
+  background: url(https://static.21cake.com/themes/wap/img/radio-select.png) no-repeat center left;
+  background-size: 22px 22px;
+}
+.check-list .li .icon.on {
+  background: url(https://static.21cake.com/themes/wap/img/radio-selected.png) no-repeat center left;
+  background-size: 22px 22px;
+}
+
+.check-list .li.tip {
+  height: auto;
+  line-height: 38rpx;
+  border-bottom: none;
+  color: #C69C6D;
+  padding-top: 20rpx;
+}
+.check-list .li.tip view {
+  width: 120rpx;
+  text-align: center;
+  border: 2rpx solid #C69C6D;
+  color: #C69C6D;
+  padding: 0px 6rpx;
+  margin-right: 2rpx;
+  font-size: 24rpx;
+  transform: scale(.83);
+  transform-origin: left center;
+}
+
+.check-list .date .li-l .i {
+  display: inline-block;
+  height: 24rpx;
+  width: 24rpx;
+  background: url(https://static.21cake.com/themes/wap/img/oreder-time.png) no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+  margin-right: 8rpx;
+  margin-top: -4rpx;
+}
+.check-list .li .li-r {
+  background: url(https://static.21cake.com/themes/wap/img/go-right.png) no-repeat right center;
+  padding-right: 15px;
+}
+
+.check-list .bread .li-l .i {
+  font-size: 24rpx;
+  background: #FE3939;
+  color: #fff;
+  display: inline-block;
+  border-radius: 18rpx;
+  line-height: 36rpx;
+  padding: 0 12rpx;
+  transform: scale(.7);
+}
+
+.pay-way {
+  margin-top: 60rpx;
+}
+.pay-way .h5 {
+  color: #969696;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  margin-left: 28rpx;
+  margin-bottom: 16rpx;
+}
+.pay-way .payment-list .li {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #F0F0F0;
+  margin-left: 28rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.pay-way .payment-list .li.deducted .icon{
+  display: inline-block;
+  height: 56rpx;
+  width: 80rpx;
+  margin-top: 26rpx;
+  background: url(https://static.21cake.com/themes/wap/img/swich-off.png);
+  background-size: cover;
+}
+.pay-way .payment-list .li.pay-icon .li-l {
+  display: flex;
+}
+.pay-way .payment-list .li.pay-icon .img {
+  display: inline-block;
+  width: 53rpx;
+  height: 58rpx;
+  margin: 20rpx 24rpx 0 0;
+}
+.pay-way .payment-list .li.pay-icon .li-r {
+  display: inline-block;
+  height: 44rpx;
+  width: 44rpx;
+  margin-top: 28rpx;
+  margin-left: 10rpx;
+  background: url(https://static.21cake.com/themes/wap/img/radio-select.png) no-repeat center left;
+  background-size: 22px 22px;
+}
+.pay-way .payment-list .li.pay-icon .li-r.on {
+  background: url(https://static.21cake.com/themes/wap/img/radio-selected.png) no-repeat center left;
+  background-size: 22px 22px;
+}
+.pay-way .payment-list .li.invoice .li-r {
+  background: url(https://static.21cake.com/themes/wap/img/go-right.png) no-repeat right center;
+  padding-right: 15px;
+}
+
+
+.leave-msg {
+  margin-top: 60rpx;
+}
+.leave-msg .h5 {
+  color: #969696;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  margin-left: 28rpx;
+  margin-bottom: 16rpx;
+}
+.leave-msg .ipt {
+  border: none;
+  height: 100rpx;
+  padding: 28rpx;
+  outline: none;
+  line-height: 30rpx;
+}
+.leave-msg .placeholder {
+  color: #C69C6D;
+  font-size: 24rpx;
+}
+
+.pay-money {
+  margin-top: 40rpx;
+  padding: 20rpx 28rpx;
+}
+.pay-money .h5 {
+  color: #969696;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  margin-bottom: 36rpx;
+}
+.pay-money .cost {
+  display: flex;
+  justify-content: space-between;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+
+
+
+
+
+
+
+
+
+.pay-bottom {
+  display: flex;
+  justify-content: flex-end;
+  height: 88rpx;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+  line-height: 88rpx;
+  background-color: #fff;
+  box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.10);
+}
+.pay-bottom .price {
+  margin-right: 36rpx;
+  font-size: 24rpx;
+}
+.pay-bottom .price text {
+  font-size: 32rpx;
+}
+.pay-bottom .buy {
+  height: 88rpx;
+  background-color: #442818;
+  text-align: center;
+  width: 25%;
+  color: #fff;
+  font-size: 30rpx;
+}
+

@@ -1,0 +1,28 @@
+<!--components/bottom/bottom.wxml-->
+<view class="footer">
+  <view class="footer-cell" wx:for="{{items}}" wx:key="index">
+    <view class="cell-hd {{item.flag?'on':''}}" bindtap="changeOn" data-i="{{index}}">{{item.title}}<view class="i"></view></view>
+    <view class="cell-bd {{item.flag?'on':''}}">
+      <view class="li" wx:for="{{item.contents}}" wx:key="index">{{item}}</view>
+    </view>
+  </view>
+  <view class="footer-brand">
+    <image class="image" src="https://static.21cake.com/themes/wap/img/footer-logo.png"></image>
+    <view class="ul">
+      <view class="li">
+        <image class="img" src="https://static.21cake.com/themes/wap/img/footer-icon-tel.png"></image>
+      </view>
+      <view class="li">
+        <image class="img" src="https://static.21cake.com/themes/wap/img/footer-icon-weibo.png"></image>
+      </view>
+      <view class="li">
+        <image class="img" src="https://static.21cake.com/themes/wap/img/footer-icon-app.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="footer-copyright">
+      Copyright© 21Cake蛋糕官网商城 2007-2020,版权所有
+      <view class="a">京ICP备14006254号-1</view>
+      <view class="a">京公网安备11030102010682号</view>
+  </view>
+</view>

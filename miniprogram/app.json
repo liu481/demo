@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/type/type",
+    "pages/produce/produce",
+    "pages/gallery/gallery",
+    "pages/magaiz/magaiz",
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/order/order"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

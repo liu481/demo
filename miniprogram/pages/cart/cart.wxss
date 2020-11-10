@@ -1,0 +1,324 @@
+/* pages/cart/cart.wxss */
+.have {
+  padding-bottom: 136rpx;
+  font-size: 24rpx;
+}
+.tip {
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+}
+.list {
+  margin-top: 20rpx;
+}
+.list .item {
+  margin-bottom: 30rpx;
+  padding: 0 40rpx;
+  padding-bottom: 30rpx;
+  position: relative;
+}
+.list .item .box {
+  display: flex;
+}
+.list .item .box .a {
+  width: 218rpx;
+  height: 240rpx;
+}
+.list .item .box .a .img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.list .info {
+  margin-left: 36rpx;
+  width: 416rpx;
+}
+.list .info .name {
+  font-size: 26rpx;
+  margin-top: 30rpx;
+}
+.list .info .title {
+  font-size: 26rpx;
+  margin-bottom: 12rpx;
+}
+.list .info .price {
+  color: #969696;
+  margin-top: 20rpx;
+}
+.list .info .gram {
+  color: #969696;
+}
+.list .info .grams {
+  display: inline-block;
+  border: 2rpx solid #E2E2E2;
+  color: #969696;
+  padding: 4rpx 4rpx 2rpx 10rpx;
+  margin-top: 4rpx;
+}
+.list .info .grams .i {
+  display: inline-block;
+  height: 18rpx;
+  width: 36rpx;
+  margin-left: 4rpx;
+  background: url(https://static.21cake.com/themes/wap/img/cart-select-pound.png) no-repeat center center;
+  background-size: 11px;
+}
+.list .cart-num {
+  display: flex;
+  position: absolute;
+  top: 168rpx;
+  right: 40rpx;
+  height: 52rpx;
+  width: 156rpx;
+  overflow: hidden;
+}
+.list .cart-num .num {
+  display: inline-block;
+  height: 52rpx;
+  width: 52rpx;
+  background: #f0f0f0;
+}
+.list .cart-num .num .img {
+  display: block;
+  margin: 0 auto;
+}
+.list .cart-num .num.del .img {
+  width: 20rpx;
+  height: 22rpx;
+  margin-top: 16rpx;
+}
+.list .cart-num .num.even .img {
+  width: 24rpx;
+  height: 4rpx;
+  margin-top: 24rpx;
+}
+.list .cart-num .num.add .img {
+  width: 24rpx;
+  margin-top: 14rpx;
+}
+.list .cart-num .num-c {
+  font-size: 24rpx;
+  line-height: 52rpx;
+  text-align: center;
+  background: #F7F7F7;
+  color: #969696;
+}
+.list .laid-count {
+  height: 92rpx;
+  line-height: 92rpx;
+  background: url(https://static.21cake.com/themes/wap/img/cart-laid.png) no-repeat left;
+  background-size: 46px 46px;
+  padding-left: 110rpx;
+}
+
+
+.have .bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 88rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 88;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.10);
+}
+.have .bottom .bot-l {
+  flex-shrink: 0;
+  height: 88rpx;
+  width: 88rpx;
+  background: url(https://static.21cake.com/themes/wap/img/cart-order-delete.png) no-repeat center center;
+  background-size: 14px auto;
+}
+.have .bottom .bot-r {
+  flex-shrink: 0;
+  display: flex;
+}
+.have .bottom .bot-rl {
+  flex-shrink: 0;
+  margin-right: 24rpx;
+}
+.have .bottom .bot-rl .p {
+  margin: 0;
+  line-height: 32rpx;
+  font-size: 24rpx;
+  color: #707070;
+  text-align: right;
+}
+.have .bottom .bot-rl .price {
+  margin-top: 6rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #442818;
+}
+.have .bottom .bot-rl .price .i {
+  font-size: 24rpx;
+  display: inline-block;
+}
+.have .bottom .bot-rr {
+  flex-shrink: 0;
+  height: 88rpx;
+  width: 192rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  background: #442818;
+}
+
+
+
+.options {
+  margin: 36rpx 28rpx 16rpx;
+  border-bottom: 1px solid #D2D2D2;
+  display: flex;
+  flex-wrap: wrap;
+}
+.options .option {
+  width: 48%;
+  margin-right: 2%;
+  margin-bottom: 12rpx;
+  color: #442818;
+  font-size: 24rpx;
+}
+.options .option .i {
+  display: inline-block;
+  height: 48rpx;
+  width: 48rpx;
+  margin-right: 16rpx;
+  background: url(https://static.21cake.com/themes/wap/img/goods-icon.png) no-repeat;
+  background-size: 50px auto !important;
+  vertical-align: middle;
+}
+.options .option.specs .i {
+  background-position: 0 2px;
+}
+.options .option.amount .i {
+  background-position: 0 -27px;
+}
+.options .option.table .i {
+  background-position: -30px 0px;
+}
+.options .option.date .i {
+  background-position: -30px -29px;
+}
+
+.select-card {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #0003;
+  z-index: 88;
+}
+.select-card .i {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.select-card .card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -40%;
+  background-color: #fff;
+  box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.1);
+  padding: 28rpx 48rpx 108rpx 48rpx;
+}
+.select-card .card.on {
+  bottom: 0;
+  transition: all 2s;
+}
+.select-card .card .card-price {
+  font-size: 32rpx;
+  line-height: 44rpx;
+  margin-bottom: 30rpx;
+  font-weight: bold;
+}
+.select-card .card .options {
+  margin: 36rpx 0 20rpx;
+}
+
+.select-card .card .normal-title {
+  font-size: 24rpx;
+}
+.select-card .card .normal-list {
+  margin: 24rpx 0 40rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.select-card .card .normal-list .normal-item {
+  width: 78rpx;
+  height: 56rpx;
+  padding: 0 30rpx;
+  line-height: 28rpx;
+  font-size: 24rpx;
+  text-align: center;
+  border: 1px solid #fff;
+  word-break: break-all;
+  margin: 0 20rpx 20rpx 0;
+}
+.select-card .card .normal-list .normal-item.on {
+  border-color: #000;
+  background: url(https://static.21cake.com/themes/wap/img/icon_selected.png) no-repeat top left;
+  background-size: 12px 12px;
+}
+.select-card .card .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 28rpx;
+  width: 28rpx;
+  padding: 30rpx;
+  background: url(https://static.21cake.com/themes/wap/img/list-hide.png) no-repeat center;
+  background-size: 14px 14px;
+}
+
+.btn-group {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.1);
+  display: flex;
+  text-align: center;
+}
+.btn-group .btn {
+  width: 50%;
+  font-size: 30rpx;
+  line-height: 92rpx;
+  background: #fff;
+}
+.btn-group .btn.buy {
+  color: #fff;
+  background: #442818;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.none {
+  margin-top: 260rpx;
+  text-align: center;
+}
+.none .img {
+  display: inline-block;
+  width: 300rpx;
+  height: 300rpx;
+}
+.none .p {
+  margin: 20rpx 0;
+  font-size: 28rpx;
+  color: #D5BFA7;
+}

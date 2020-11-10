@@ -1,0 +1,75 @@
+/* components/bottom/bottom.wxss */
+.footer {
+  width: 100%;
+  background: #333;
+  padding: 20rpx 5%;
+  color: #BEBEBE;
+  font-size: 24rpx;
+  box-sizing: border-box;
+}
+.footer .cell-hd {
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.footer .cell-hd .i {
+  width: 80rpx;
+  height: 80rpx;
+  flex-shrink: 0;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGKADAAQAAAABAAAAGAAAAADiNXWtAAAAqklEQVRIDWNgoDFgJNb8////KwDVckPVv2dkZHxGrF6i1AEtOAzEMDCHKE1ARUzEKiRX3agFBENuNIgIBhE4owETtwpQ5QwCqo2B8gJQNaBMdp2Aeh9gZvwBs8AIqPgsAQ2kSvMALfhK80hmgTrrHZBeQsCJ7kB5UaiaO0D6BAH1fwjIo0oD42m0LEINEmrxaJ6KRi0gGFWkVPp8QNNgGfMnqBggaDo9FAAAkzY5VwL2ItAAAAAASUVORK5CYII=) no-repeat right center;
+  background-size: 12px;
+}
+.footer .cell-hd.on .i {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAABAAAAADSPWd/AAAAF0lEQVQYGWP8DwQMVARMVDQLbNTgNxAAB5kEBANHX0UAAAAASUVORK5CYII=) no-repeat right center;
+  background-size: 12px;
+}
+.footer .cell-bd {
+  overflow: hidden;
+  max-height: 0;
+  transition: .35s;
+}
+.footer .cell-bd .li {
+  color: #BEBEBE;
+  line-height: 36rpx;
+}
+.footer .cell-bd.on {
+  height: auto;
+  max-height: 360rpx;
+}
+
+.footer .footer-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.footer .footer-brand .image {
+  display: inline-block;
+  width: 280rpx;
+  height: 68rpx;
+  flex-shrink: 0;
+}
+.footer .footer-brand .ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer .footer-brand .ul .li {
+  width: 68rpx;
+  margin-left: 32rpx;
+}
+.footer .footer-brand .ul .li .img {
+  display: block;
+  width: 100%;
+  height: 68rpx;
+}
+.footer .footer-copyright {
+  color: #676767;
+  text-align: center;
+}
+.footer .footer-copyright .a {
+  display: inline-block;
+  color: #676767;
+  margin: 0 8rpx;
+}

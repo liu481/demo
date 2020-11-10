@@ -1,0 +1,18 @@
+<!--pages/type/type.wxml-->
+<navbar title="{{title}}"></navbar>
+<view class="top">
+  <view wx:for="{{types}}" wx:key="index">
+    <view class="head" wx:if="{{type == item.type}}">
+      <image class="img" src="{{item.img}}"></image>
+      <view class="title">
+        <view class="h4">{{item.type}}</view>
+        <view class="p">{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<goods type="{{type}}"></goods>
+<view class="lost" style="padding: 50rpx 80rpx 0 0; margin: 0 40rpx; background: url(https://static.21cake.com/themes/wap/img/list-empty.png) no-repeat right center; background-size: 34px 38px;">
+  <view class="none" style="line-height: 144rpx; text-align: right; color: #D5D5D5;">没了</view>
+</view>
+<bottom></bottom>
